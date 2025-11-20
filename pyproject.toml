@@ -1,7 +1,7 @@
 [project]
-name = "jigsaw-component-mcp-server"
+name = "simple-utility-server"
 version = "1.0.0"
-description = "MCP server for electronic component database with search and compatibility checking"
+description = "A simple MCP server with practical utility tools"
 requires-python = ">=3.10"
 dependencies = [
     "mcp",

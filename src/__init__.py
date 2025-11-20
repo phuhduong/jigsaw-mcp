@@ -1,4 +1,2 @@
-"""Jigsaw MCP Server - Component Database Tools."""
-
-__version__ = "0.1.0"
+"""Package marker for the Dedalus MCP server source code."""
 
