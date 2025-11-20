@@ -5,6 +5,7 @@ description = "MCP server for electronic component database with search and comp
 requires-python = ">=3.10"
 dependencies = [
     "mcp",
+    "openmcp @ git+https://github.com/dedalus-labs/openmcp-python.git",
     "python-dotenv",
 ]
 
@@ -14,6 +15,9 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
 packages = ["src"]
+
+[tool.setuptools.package-data]
+"src" = ["data/*.json"]
 
 [project.scripts]
 main = "src.main:main"
