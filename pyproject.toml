@@ -15,8 +15,5 @@ build-backend = "setuptools.build_meta"
 [tool.setuptools]
 packages = ["src"]
 
-[tool.setuptools.package-data]
-"src" = ["data/*.json"]
-
 [project.scripts]
 main = "src.main:main"

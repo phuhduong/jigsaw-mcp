@@ -1,59 +1,102 @@
 #!/usr/bin/env python3
-"""MCP server for electronic component database."""
+# ==============================================================================
+#                  Simple MCP Server - Demo Implementation
+# ==============================================================================
+
+"""A simple MCP server with practical utility tools.
+
+This server demonstrates:
+- Text manipulation tools
+- Math operations
+- Data formatting utilities
+"""
 
 from __future__ import annotations
 
 import asyncio
-import os
-from pathlib import Path
-from typing import Any, Dict, List
+import logging
+from datetime import datetime
 
 from openmcp import MCPServer, tool
 
-from .tools.component_tools import (
-    initialize_database,
-    search_components_tool,
-    get_component_details_tool,
-    check_compatibility_tool,
-    suggest_alternatives_tool,
-)
+# Suppress logs for clean output
+for logger_name in ("mcp", "httpx", "uvicorn", "uvicorn.access", "uvicorn.error"):
+    logging.getLogger(logger_name).setLevel(logging.CRITICAL)
 
-# Initialize database
-data_file = os.getenv(
-    "COMPONENT_DB_PATH",
-    str(Path(__file__).parent / "data" / "components.json")
-)
-initialize_database(data_file)
+server = MCPServer("simple-utility-server")
 
-# Create server instance
-server = MCPServer("jigsaw-component-server")
-
-# Register tools
 with server.binding():
 
-    @tool(description="Search for electronic components by natural language query")
-    def search_components(query: str, limit: int = 10) -> Dict[str, Any]:
-        """Search for electronic components by natural language query."""
-        return search_components_tool(query, limit)
+    @tool(description="Reverse a string")
+    def reverse_text(text: str) -> str:
+        """Takes a string and returns it reversed."""
+        return text[::-1]
 
-    @tool(description="Get detailed specifications for a component by its MPN")
-    def get_component_details(mpn: str) -> Dict[str, Any]:
-        """Get detailed specifications for a component by its MPN."""
-        return get_component_details_tool(mpn)
+    @tool(description="Count words in a text")
+    def count_words(text: str) -> dict[str, int]:
+        """Analyzes text and returns word count statistics."""
+        words = text.split()
+        return {
+            "total_words": len(words),
+            "total_characters": len(text),
+            "total_characters_no_spaces": len(text.replace(" ", "")),
+        }
 
-    @tool(description="Check compatibility between multiple components")
-    def check_compatibility(mpns: List[str]) -> Dict[str, Any]:
-        """Check compatibility between multiple components."""
-        return check_compatibility_tool(mpns)
+    @tool(description="Calculate factorial of a number")
+    def factorial(n: int) -> int:
+        """Calculates the factorial of a non-negative integer."""
+        if n < 0:
+            raise ValueError("Factorial is not defined for negative numbers")
+        if n == 0 or n == 1:
+            return 1
+        result = 1
+        for i in range(2, n + 1):
+            result *= i
+        return result
 
-    @tool(description="Get alternative or similar components for a given MPN")
-    def suggest_alternatives(mpn: str) -> Dict[str, Any]:
-        """Get alternative or similar components for a given MPN."""
-        return suggest_alternatives_tool(mpn)
+    @tool(description="Get current timestamp information")
+    async def get_timestamp() -> dict[str, str | int]:
+        """Returns current timestamp in multiple formats."""
+        now = datetime.now()
+        return {
+            "iso_format": now.isoformat(),
+            "unix_timestamp": int(now.timestamp()),
+            "human_readable": now.strftime("%Y-%m-%d %H:%M:%S"),
+            "year": now.year,
+            "month": now.month,
+            "day": now.day,
+        }
+
+    @tool(description="Convert temperature between Celsius and Fahrenheit")
+    def convert_temperature(value: float, from_unit: str) -> dict[str, float]:
+        """Converts temperature between C and F.
+
+        Args:
+            value: The temperature value
+            from_unit: Either 'C' or 'F'
+        """
+        from_unit = from_unit.upper()
+        if from_unit == "C":
+            fahrenheit = (value * 9 / 5) + 32
+            return {"celsius": value, "fahrenheit": round(fahrenheit, 2)}
+        elif from_unit == "F":
+            celsius = (value - 32) * 5 / 9
+            return {"celsius": round(celsius, 2), "fahrenheit": value}
+        else:
+            raise ValueError("from_unit must be 'C' or 'F'")
+
+    @tool(description="Create a simple list from comma-separated values")
+    def parse_csv_line(line: str) -> list[str]:
+        """Splits a CSV line into a list of values."""
+        return [item.strip() for item in line.split(",")]
 
 
 async def main() -> None:
-    """Start the MCP server."""
+    """Start the MCP server on streamable-http transport."""
+    print("🚀 Starting Simple Utility Server...")
+    print("📡 Transport: streamable-http")
+    print("🔧 Available tools: reverse_text, count_words, factorial, get_timestamp, convert_temperature, parse_csv_line")
+    print()
     await server.serve(transport="streamable-http", verbose=False, log_level="critical")
 
 
