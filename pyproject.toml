@@ -1,0 +1,20 @@
+[project]
+name = "jigsaw-component-mcp-server"
+version = "1.0.0"
+description = "MCP server for electronic component database with search and compatibility checking"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp",
+    "python-dotenv",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["src"]
+
+[project.scripts]
+main = "src.main:main"
+

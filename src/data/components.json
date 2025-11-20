@@ -1,0 +1,590 @@
+{
+  "components": [
+    {
+      "mpn": "ESP32-S3-WROOM-1-N8R2",
+      "manufacturer": "Espressif Systems",
+      "category": "MCU",
+      "description": "WiFi and Bluetooth 5.0 enabled 32-bit microcontroller with dual-core processor",
+      "specs": {
+        "voltage_min": 3.0,
+        "voltage_max": 3.6,
+        "current_max": 0.24,
+        "package": "48-QFN",
+        "interfaces": ["I2C", "SPI", "UART", "WiFi", "Bluetooth 5.0"],
+        "pin_count": 48,
+        "flash_memory_mb": 8,
+        "ram_mb": 512
+      },
+      "pricing": {
+        "price_usd": 2.89,
+        "currency": "USD",
+        "stock_status": "in_stock"
+      },
+      "datasheet_url": "https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf",
+      "compatibility": {
+        "voltage_compatible": [3.0, 3.3, 3.6],
+        "interface_requirements": ["I2C", "SPI"]
+      },
+      "alternatives": ["ESP32-C3", "ESP32-WROOM-32", "ESP8266"]
+    },
+    {
+      "mpn": "ESP32-C3-WROOM-02",
+      "manufacturer": "Espressif Systems",
+      "category": "MCU",
+      "description": "RISC-V based WiFi and Bluetooth 5.0 microcontroller",
+      "specs": {
+        "voltage_min": 3.0,
+        "voltage_max": 3.6,
+        "current_max": 0.15,
+        "package": "32-QFN",
+        "interfaces": ["I2C", "SPI", "UART", "WiFi", "Bluetooth 5.0"],
+        "pin_count": 32,
+        "flash_memory_mb": 4,
+        "ram_mb": 400
+      },
+      "pricing": {
+        "price_usd": 1.95,
+        "currency": "USD",
+        "stock_status": "in_stock"
+      },
+      "datasheet_url": "https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf",
+      "compatibility": {
+        "voltage_compatible": [3.0, 3.3, 3.6],
+        "interface_requirements": ["I2C", "SPI"]
+      },
+      "alternatives": ["ESP32-S3", "ESP8266", "RP2040"]
+    },
+    {
+      "mpn": "RP2040",
+      "manufacturer": "Raspberry Pi",
+      "category": "MCU",
+      "description": "Dual-core ARM Cortex-M0+ microcontroller with programmable I/O",
+      "specs": {
+        "voltage_min": 1.8,
+        "voltage_max": 3.6,
+        "current_max": 0.12,
+        "package": "56-QFN",
+        "interfaces": ["I2C", "SPI", "UART", "USB"],
+        "pin_count": 56,
+        "flash_memory_mb": 0,
+        "ram_mb": 264
+      },
+      "pricing": {
+        "price_usd": 1.00,
+        "currency": "USD",
+        "stock_status": "in_stock"
+      },
+      "datasheet_url": "https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf",
+      "compatibility": {
+        "voltage_compatible": [1.8, 3.3, 3.6],
+        "interface_requirements": ["I2C", "SPI"]
+      },
+      "alternatives": ["ESP32-S3", "STM32F4", "ATmega328P"]
+    },
+    {
+      "mpn": "STM32F411CEU6",
+      "manufacturer": "STMicroelectronics",
+      "category": "MCU",
+      "description": "ARM Cortex-M4 microcontroller with 512KB Flash, 128KB RAM",
+      "specs": {
+        "voltage_min": 1.7,
+        "voltage_max": 3.6,
+        "current_max": 0.18,
+        "package": "48-UFQFN",
+        "interfaces": ["I2C", "SPI", "UART", "USB", "CAN"],
+        "pin_count": 48,
+        "flash_memory_mb": 0.5,
+        "ram_mb": 128
+      },
+      "pricing": {
+        "price_usd": 3.25,
+        "currency": "USD",
+        "stock_status": "in_stock"
+      },
+      "datasheet_url": "https://www.st.com/resource/en/datasheet/stm32f411ce.pdf",
+      "compatibility": {
+        "voltage_compatible": [1.8, 3.3, 3.6],
+        "interface_requirements": ["I2C", "SPI"]
+      },
+      "alternatives": ["STM32F4", "ESP32-S3", "RP2040"]
+    },
+    {
+      "mpn": "ATmega328P-PU",
+      "manufacturer": "Microchip",
+      "category": "MCU",
+      "description": "8-bit AVR microcontroller, 32KB Flash, 2KB RAM",
+      "specs": {
+        "voltage_min": 1.8,
+        "voltage_max": 5.5,
+        "current_max": 0.02,
+        "package": "28-PDIP",
+        "interfaces": ["I2C", "SPI", "UART"],
+        "pin_count": 28,
+        "flash_memory_mb": 0.032,
+        "ram_mb": 2
+      },
+      "pricing": {
+        "price_usd": 1.50,
+        "currency": "USD",
+        "stock_status": "in_stock"
+      },
+      "datasheet_url": "https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf",
+      "compatibility": {
+        "voltage_compatible": [1.8, 3.3, 5.0],
+        "interface_requirements": ["I2C", "SPI"]
+      },
+      "alternatives": ["ATmega2560", "ESP8266", "RP2040"]
+    },
+    {
+      "mpn": "AP2112K-3.3TRG1",
+      "manufacturer": "Diodes Incorporated",
+      "category": "Power",
+      "description": "600mA low dropout voltage regulator with enable pin",
+      "specs": {
+        "voltage_min": 2.5,
+        "voltage_max": 6.0,
+        "voltage_out": 3.3,
+        "current_max": 0.6,
+        "package": "SOT-25",
+        "interfaces": [],
+        "pin_count": 5
+      },
+      "pricing": {
+        "price_usd": 0.45,
+        "currency": "USD",
+        "stock_status": "in_stock"
+      },
+      "datasheet_url": "https://www.diodes.com/assets/Datasheets/AP2112.pdf",
+      "compatibility": {
+        "voltage_compatible": [3.3],
+        "interface_requirements": []
+      },
+      "alternatives": ["AMS1117-3.3", "LM1117-3.3", "AP2112K-5.0"]
+    },
+    {
+      "mpn": "AMS1117-3.3",
+      "manufacturer": "Advanced Monolithic Systems",
+      "category": "Power",
+      "description": "1A low dropout voltage regulator, 3.3V output",
+      "specs": {
+        "voltage_min": 4.75,
+        "voltage_max": 15.0,
+        "voltage_out": 3.3,
+        "current_max": 1.0,
+        "package": "SOT-223",
+        "interfaces": [],
+        "pin_count": 4
+      },
+      "pricing": {
+        "price_usd": 0.35,
+        "currency": "USD",
+        "stock_status": "in_stock"
+      },
+      "datasheet_url": "https://www.advanced-monolithic.com/pdf/ds1117.pdf",
+      "compatibility": {
+        "voltage_compatible": [3.3],
+        "interface_requirements": []
+      },
+      "alternatives": ["AP2112K-3.3", "LM1117-3.3", "LD1117-3.3"]
+    },
+    {
+      "mpn": "TP4056",
+      "manufacturer": "Shenzhen Top Power",
+      "category": "Power",
+      "description": "Lithium battery charger IC with USB input",
+      "specs": {
+        "voltage_min": 4.5,
+        "voltage_max": 8.0,
+        "voltage_out": 4.2,
+        "current_max": 1.0,
+        "package": "SOP-8",
+        "interfaces": [],
+        "pin_count": 8
+      },
+      "pricing": {
+        "price_usd": 0.15,
+        "currency": "USD",
+        "stock_status": "in_stock"
+      },
+      "datasheet_url": "https://datasheet.lcsc.com/lcsc/1811151637_Shenzhen-Top-Power-TP4056_C82447.pdf",
+      "compatibility": {
+        "voltage_compatible": [3.7, 4.2],
+        "interface_requirements": []
+      },
+      "alternatives": ["MCP73831", "BQ24040", "MAX1555"]
+    },
+    {
+      "mpn": "BME280",
+      "manufacturer": "Bosch Sensortec",
+      "category": "Sensor",
+      "description": "Digital humidity, pressure and temperature sensor with I2C and SPI interfaces",
+      "specs": {
+        "voltage_min": 1.71,
+        "voltage_max": 3.6,
+        "current_max": 0.003,
+        "package": "LGA-8",
+        "interfaces": ["I2C", "SPI"],
+        "pin_count": 8,
+        "temperature_range": [-40, 85],
+        "humidity_range": [0, 100],
+        "pressure_range": [300, 1100]
+      },
+      "pricing": {
+        "price_usd": 3.95,
+        "currency": "USD",
+        "stock_status": "in_stock"
+      },
+      "datasheet_url": "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme280-ds002.pdf",
+      "compatibility": {
+        "voltage_compatible": [1.8, 3.3, 3.6],
+        "interface_requirements": ["I2C"]
+      },
+      "alternatives": ["BMP280", "DHT22", "SHT31"]
+    },
+    {
+      "mpn": "BMP280",
+      "manufacturer": "Bosch Sensortec",
+      "category": "Sensor",
+      "description": "Digital barometric pressure sensor with I2C and SPI interfaces",
+      "specs": {
+        "voltage_min": 1.71,
+        "voltage_max": 3.6,
+        "current_max": 0.0025,
+        "package": "LGA-8",
+        "interfaces": ["I2C", "SPI"],
+        "pin_count": 8,
+        "temperature_range": [-40, 85],
+        "pressure_range": [300, 1100]
+      },
+      "pricing": {
+        "price_usd": 2.50,
+        "currency": "USD",
+        "stock_status": "in_stock"
+      },
+      "datasheet_url": "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp280-ds001.pdf",
+      "compatibility": {
+        "voltage_compatible": [1.8, 3.3, 3.6],
+        "interface_requirements": ["I2C"]
+      },
+      "alternatives": ["BME280", "MS5611", "LPS22HB"]
+    },
+    {
+      "mpn": "DHT22",
+      "manufacturer": "Aosong",
+      "category": "Sensor",
+      "description": "Digital temperature and humidity sensor with single-wire interface",
+      "specs": {
+        "voltage_min": 3.3,
+        "voltage_max": 5.5,
+        "current_max": 0.0025,
+        "package": "4-Pin",
+        "interfaces": ["OneWire"],
+        "pin_count": 4,
+        "temperature_range": [-40, 80],
+        "humidity_range": [0, 100]
+      },
+      "pricing": {
+        "price_usd": 4.50,
+        "currency": "USD",
+        "stock_status": "in_stock"
+      },
+      "datasheet_url": "https://www.mouser.com/datasheet/2/758/DHT22-2394244.pdf",
+      "compatibility": {
+        "voltage_compatible": [3.3, 5.0],
+        "interface_requirements": []
+      },
+      "alternatives": ["DHT11", "BME280", "SHT31"]
+    },
+    {
+      "mpn": "MPU6050",
+      "manufacturer": "InvenSense",
+      "category": "Sensor",
+      "description": "6-axis accelerometer and gyroscope with I2C interface",
+      "specs": {
+        "voltage_min": 2.375,
+        "voltage_max": 3.46,
+        "current_max": 0.0035,
+        "package": "QFN-24",
+        "interfaces": ["I2C"],
+        "pin_count": 24,
+        "accel_range": "±2g to ±16g",
+        "gyro_range": "±250°/s to ±2000°/s"
+      },
+      "pricing": {
+        "price_usd": 1.25,
+        "currency": "USD",
+        "stock_status": "in_stock"
+      },
+      "datasheet_url": "https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf",
+      "compatibility": {
+        "voltage_compatible": [3.3],
+        "interface_requirements": ["I2C"]
+      },
+      "alternatives": ["MPU9250", "LSM6DS3", "BMI160"]
+    },
+    {
+      "mpn": "HC-SR04",
+      "manufacturer": "Generic",
+      "category": "Sensor",
+      "description": "Ultrasonic distance sensor, 2-400cm range",
+      "specs": {
+        "voltage_min": 5.0,
+        "voltage_max": 5.0,
+        "current_max": 0.015,
+        "package": "Module",
+        "interfaces": ["GPIO"],
+        "pin_count": 4,
+        "range_cm": [2, 400]
+      },
+      "pricing": {
+        "price_usd": 1.50,
+        "currency": "USD",
+        "stock_status": "in_stock"
+      },
+      "datasheet_url": "https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf",
+      "compatibility": {
+        "voltage_compatible": [5.0],
+        "interface_requirements": []
+      },
+      "alternatives": ["VL53L0X", "SRF05", "US-100"]
+    },
+    {
+      "mpn": "W25Q128JVSIQ",
+      "manufacturer": "Winbond Electronics",
+      "category": "Memory",
+      "description": "128M-bit serial flash memory with SPI interface",
+      "specs": {
+        "voltage_min": 2.7,
+        "voltage_max": 3.6,
+        "current_max": 0.025,
+        "package": "SOIC-8",
+        "interfaces": ["SPI"],
+        "pin_count": 8,
+        "capacity_mb": 16
+      },
+      "pricing": {
+        "price_usd": 1.25,
+        "currency": "USD",
+        "stock_status": "in_stock"
+      },
+      "datasheet_url": "https://www.winbond.com/resource-files/w25q128jv%20revf%2003272018%20plus.pdf",
+      "compatibility": {
+        "voltage_compatible": [3.3],
+        "interface_requirements": ["SPI"]
+      },
+      "alternatives": ["W25Q64", "AT25DF081A", "MX25L8006E"]
+    },
+    {
+      "mpn": "AT24C256",
+      "manufacturer": "Microchip",
+      "category": "Memory",
+      "description": "256Kbit I2C EEPROM",
+      "specs": {
+        "voltage_min": 1.7,
+        "voltage_max": 5.5,
+        "current_max": 0.003,
+        "package": "SOIC-8",
+        "interfaces": ["I2C"],
+        "pin_count": 8,
+        "capacity_kb": 32
+      },
+      "pricing": {
+        "price_usd": 0.75,
+        "currency": "USD",
+        "stock_status": "in_stock"
+      },
+      "datasheet_url": "https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8568-AT24C256C-Datasheet.pdf",
+      "compatibility": {
+        "voltage_compatible": [1.8, 3.3, 5.0],
+        "interface_requirements": ["I2C"]
+      },
+      "alternatives": ["AT24C512", "24LC256", "CAT24C256"]
+    },
+    {
+      "mpn": "ANT-2.4-CHP-T",
+      "manufacturer": "Antenova",
+      "category": "RF",
+      "description": "2.4GHz ceramic chip antenna with 2dBi gain for WiFi and Bluetooth applications",
+      "specs": {
+        "voltage_min": 0,
+        "voltage_max": 0,
+        "current_max": 0,
+        "package": "Chip",
+        "interfaces": [],
+        "pin_count": 2,
+        "frequency_mhz": 2400,
+        "gain_dbi": 2
+      },
+      "pricing": {
+        "price_usd": 0.85,
+        "currency": "USD",
+        "stock_status": "in_stock"
+      },
+      "datasheet_url": "https://www.antenova.com/datasheets/ANT-2.4-CHP-T.pdf",
+      "compatibility": {
+        "voltage_compatible": [],
+        "interface_requirements": []
+      },
+      "alternatives": ["ANT-2.4-CW-HWR-SMA", "ANT-2.4-GW-RA"]
+    },
+    {
+      "mpn": "USB4105-GF-A",
+      "manufacturer": "GCT",
+      "category": "Connector",
+      "description": "USB Type-C connector with 24 pins, USB 2.0 data and 5V power",
+      "specs": {
+        "voltage_min": 5.0,
+        "voltage_max": 5.0,
+        "current_max": 3.0,
+        "package": "SMT",
+        "interfaces": ["USB 2.0"],
+        "pin_count": 24
+      },
+      "pricing": {
+        "price_usd": 0.65,
+        "currency": "USD",
+        "stock_status": "in_stock"
+      },
+      "datasheet_url": "https://gct.co/files/drawings/usb4105.pdf",
+      "compatibility": {
+        "voltage_compatible": [5.0],
+        "interface_requirements": ["USB"]
+      },
+      "alternatives": ["USB-C-31-M-12", "USB4105-GF-B"]
+    },
+    {
+      "mpn": "0603-X7R-100nF-50V",
+      "manufacturer": "Generic",
+      "category": "Passive",
+      "description": "100nF X7R ceramic capacitor in 0603 package, 50V rating",
+      "specs": {
+        "voltage_min": 0,
+        "voltage_max": 50,
+        "current_max": 0,
+        "package": "0603",
+        "interfaces": [],
+        "pin_count": 2,
+        "capacitance_nf": 100,
+        "tolerance_percent": 10
+      },
+      "pricing": {
+        "price_usd": 0.12,
+        "currency": "USD",
+        "stock_status": "in_stock"
+      },
+      "datasheet_url": "",
+      "compatibility": {
+        "voltage_compatible": [],
+        "interface_requirements": []
+      },
+      "alternatives": ["0603-X7R-100nF-25V", "0805-X7R-100nF-50V"]
+    },
+    {
+      "mpn": "0805-X7R-10uF-25V",
+      "manufacturer": "Generic",
+      "category": "Passive",
+      "description": "10µF X7R ceramic capacitor in 0805 package, 25V rating",
+      "specs": {
+        "voltage_min": 0,
+        "voltage_max": 25,
+        "current_max": 0,
+        "package": "0805",
+        "interfaces": [],
+        "pin_count": 2,
+        "capacitance_uf": 10,
+        "tolerance_percent": 20
+      },
+      "pricing": {
+        "price_usd": 0.08,
+        "currency": "USD",
+        "stock_status": "in_stock"
+      },
+      "datasheet_url": "",
+      "compatibility": {
+        "voltage_compatible": [],
+        "interface_requirements": []
+      },
+      "alternatives": ["0805-X7R-10uF-50V", "1206-X7R-10uF-25V"]
+    },
+    {
+      "mpn": "0603-10K-1%-RES",
+      "manufacturer": "Generic",
+      "category": "Passive",
+      "description": "10KΩ 1% tolerance thick film resistor in 0603 package",
+      "specs": {
+        "voltage_min": 0,
+        "voltage_max": 75,
+        "current_max": 0,
+        "package": "0603",
+        "interfaces": [],
+        "pin_count": 2,
+        "resistance_ohm": 10000,
+        "tolerance_percent": 1,
+        "power_watts": 0.1
+      },
+      "pricing": {
+        "price_usd": 0.05,
+        "currency": "USD",
+        "stock_status": "in_stock"
+      },
+      "datasheet_url": "",
+      "compatibility": {
+        "voltage_compatible": [],
+        "interface_requirements": []
+      },
+      "alternatives": ["0805-10K-1%-RES", "0603-10K-5%-RES"]
+    },
+    {
+      "mpn": "SSD1306",
+      "manufacturer": "Solomon Systech",
+      "category": "Display",
+      "description": "128x64 OLED display controller with I2C/SPI interface",
+      "specs": {
+        "voltage_min": 3.0,
+        "voltage_max": 5.0,
+        "current_max": 0.02,
+        "package": "COG",
+        "interfaces": ["I2C", "SPI"],
+        "pin_count": 64,
+        "resolution": "128x64"
+      },
+      "pricing": {
+        "price_usd": 2.50,
+        "currency": "USD",
+        "stock_status": "in_stock"
+      },
+      "datasheet_url": "https://cdn-shop.adafruit.com/datasheets/SSD1306.pdf",
+      "compatibility": {
+        "voltage_compatible": [3.3, 5.0],
+        "interface_requirements": ["I2C"]
+      },
+      "alternatives": ["SSD1309", "SH1106", "ST7735"]
+    },
+    {
+      "mpn": "MAX7219",
+      "manufacturer": "Maxim Integrated",
+      "category": "Display",
+      "description": "8-digit LED display driver with SPI interface",
+      "specs": {
+        "voltage_min": 4.0,
+        "voltage_max": 5.5,
+        "current_max": 0.1,
+        "package": "DIP-24",
+        "interfaces": ["SPI"],
+        "pin_count": 24
+      },
+      "pricing": {
+        "price_usd": 3.50,
+        "currency": "USD",
+        "stock_status": "in_stock"
+      },
+      "datasheet_url": "https://datasheets.maximintegrated.com/en/ds/MAX7219-MAX7221.pdf",
+      "compatibility": {
+        "voltage_compatible": [5.0],
+        "interface_requirements": ["SPI"]
+      },
+      "alternatives": ["TM1637", "MAX7221", "HT16K33"]
+    }
+  ]
+}
+
