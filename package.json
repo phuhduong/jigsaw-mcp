@@ -1,0 +1,33 @@
+{
+  "name": "jigsaw-mcp-server",
+  "version": "1.0.0",
+  "description": "A barebones MCP server for Dedalus deployment",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "jigsaw-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js --port 8000",
+    "dev": "tsx src/index.ts --port 8000",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "dedalus"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
+  }
+}
+

@@ -1,23 +1,7 @@
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-venv/
-ENV/
-.venv
-*.egg-info/
+node_modules/
 dist/
-build/
-.pytest_cache/
-.coverage
-htmlcov/
-*.db
-*.sqlite
 *.log
+.env
 .DS_Store
-*.swp
-*.swo
-*~
+*.tsbuildinfo
 
